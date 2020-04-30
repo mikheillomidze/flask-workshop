@@ -5,8 +5,7 @@ from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
-# DB_CONNECTION_STRING = os.environ.get("DB_URI", "postgresql://postgres:mysecretpassword@localhost:5432/postgres")
-DB_CONNECTION_STRING = os.environ.get("DB_URI", "postgresql://postgres:mysecretpassword@flask-demo-db.cukgibw3dnq6.eu-central-1.rds.amazonaws.com:5432/postgres")
+DB_CONNECTION_STRING = os.environ.get("DB_URI", "postgresql://postgres:mysecretpassword@localhost:5432/postgres")
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_CONNECTION_STRING
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
